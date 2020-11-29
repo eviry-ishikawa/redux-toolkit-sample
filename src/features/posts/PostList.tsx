@@ -1,11 +1,17 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
+import { selectAllPost } from './postsSlice';
+import { SinglePostPage } from './SinglePostPage';
 
-export function PostList() {
+export const PostList: React.FC = () => {
+  const posts = useSelector(selectAllPost);
   return (
     <div>
-      <span>
-        <p></p>
-      </span>
+      {posts.map((post) => (
+        <div>
+          <SinglePostPage postId={post.id} />
+        </div>
+      ))}
     </div>
   );
-}
+};
