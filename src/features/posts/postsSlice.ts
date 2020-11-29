@@ -53,10 +53,15 @@ export const postsSlice = createSlice({
         reaction,
       }: { postId: number; reaction: keyof Reactions } = action.payload;
       const post = state.find((post) => post.id === postId);
-      post?.reactions[reaction];
+      if (post) {
+        post.reactions[reaction] += 1;
+        console.log(post.reactions);
+      }
     },
   },
 });
+
+export const { reactionAdded } = postsSlice.actions;
 
 export const selectAllPost = (state: RootState): Posts => state.posts;
 export const selectPostById = (
