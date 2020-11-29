@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { selectAllPost } from './postsSlice';
 import { SinglePostPage } from './SinglePostPage';
 
-export const PostList: React.FC = () => {
+export let PostList: React.FC = () => {
   const posts = useSelector(selectAllPost);
   return (
     <div>
@@ -15,3 +15,5 @@ export const PostList: React.FC = () => {
     </div>
   );
 };
+
+PostList = React.memo(PostList);
