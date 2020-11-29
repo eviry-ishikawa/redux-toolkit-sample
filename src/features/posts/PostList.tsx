@@ -8,7 +8,7 @@ export const PostList: React.FC = () => {
   return (
     <div>
       {posts.map((post) => (
-        <div>
+        <div key={post.id}>
           <SinglePostPage postId={post.id} />
         </div>
       ))}
