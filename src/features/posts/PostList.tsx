@@ -4,7 +4,7 @@ import { selectAllPost } from './postsSlice';
 import { ReactionButton } from './ReactionButton';
 import { SinglePostPage } from './SinglePostPage';
 
-export let PostList: React.FC = () => {
+export const PostList: React.FC = () => {
   const posts = useSelector(selectAllPost);
   return (
     <div>
@@ -17,5 +17,3 @@ export let PostList: React.FC = () => {
     </div>
   );
 };
-
-PostList = React.memo(PostList);
