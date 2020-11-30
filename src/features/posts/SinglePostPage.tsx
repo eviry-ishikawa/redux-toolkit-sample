@@ -7,7 +7,7 @@ type SinglePostPageProps = {
   postId: number;
 };
 
-export const SinglePostPage: React.FC<SinglePostPageProps> = ({ postId }) => {
+export const SinglePostPage = React.memo(({ postId }: SinglePostPageProps) => {
   const post = useSelector((state: RootState) => selectPostById(state, postId));
 
   if (post === undefined) {
@@ -20,4 +20,4 @@ export const SinglePostPage: React.FC<SinglePostPageProps> = ({ postId }) => {
       {post.user}
     </div>
   );
-};
+});

@@ -15,7 +15,7 @@ type ReactionButtonProps = {
   postId: number;
 };
 
-export const ReactionButton: React.FC<ReactionButtonProps> = ({ postId }) => {
+export const ReactionButton = React.memo(({ postId }: ReactionButtonProps) => {
   const dispatch = useDispatch();
   const post = useSelector((state: RootState) => selectPostById(state, postId));
 
@@ -30,4 +30,4 @@ export const ReactionButton: React.FC<ReactionButtonProps> = ({ postId }) => {
   ));
 
   return <div>{reactionButtons}</div>;
-};
+});
