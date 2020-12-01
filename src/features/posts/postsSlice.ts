@@ -31,14 +31,14 @@ const initialState: Posts = [
     id: 2,
     title: 'test title2',
     content: 'test content',
-    user: 1,
+    user: 2,
     reactions: { thumbsUp: 0, hooray: 0, heart: 0, rocket: 0, eyes: 0 },
   },
   {
     id: 3,
     title: 'test title3',
     content: 'test content',
-    user: 1,
+    user: 3,
     reactions: { thumbsUp: 0, hooray: 0, heart: 0, rocket: 0, eyes: 0 },
   },
 ];
