@@ -12,14 +12,14 @@ const reactionEmoji = {
 };
 
 type ReactionButtonProps = {
-  postId: number;
+  postId: string;
 };
 
 export const ReactionButton = React.memo(({ postId }: ReactionButtonProps) => {
   const dispatch = useDispatch();
   const post = useSelector((state: RootState) => selectPostById(state, postId));
 
-  const onClick = (postId: number, reactionName: string) => {
+  const onClick = (postId: string, reactionName: string) => {
     dispatch(reactionAdded({ postId: postId, reaction: reactionName }));
   };
 

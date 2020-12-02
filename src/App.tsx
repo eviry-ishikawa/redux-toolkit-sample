@@ -1,11 +1,22 @@
 import React from 'react';
 import { PostList } from './features/posts/PostList';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+} from 'react-router-dom';
+import { PostPage } from './features/posts/PostPage';
 
 function App() {
   return (
-    <div className="App">
-      <PostList />
-    </div>
+    <Router>
+      <Route exact path="/" component={PostList} />
+      <Route path="/posts/:postId" component={PostPage} />
+      {/* <div className="App">
+        <PostList />
+      </div> */}
+    </Router>
   );
 }
 
