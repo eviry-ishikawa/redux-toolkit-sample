@@ -13,7 +13,7 @@ export type Post = {
   id: string;
   title: string;
   content: string;
-  user: number;
+  user: string;
   reactions: Reactions;
 };
 
@@ -24,21 +24,21 @@ const initialState: Posts = [
     id: '1',
     title: 'test title1',
     content: 'test content',
-    user: 1,
+    user: '1',
     reactions: { thumbsUp: 0, hooray: 0, heart: 0, rocket: 0, eyes: 0 },
   },
   {
     id: '2',
     title: 'test title2',
     content: 'test content',
-    user: 2,
+    user: '2',
     reactions: { thumbsUp: 0, hooray: 0, heart: 0, rocket: 0, eyes: 0 },
   },
   {
     id: '3',
     title: 'test title3',
     content: 'test content',
-    user: 3,
+    user: '3',
     reactions: { thumbsUp: 0, hooray: 0, heart: 0, rocket: 0, eyes: 0 },
   },
 ];
@@ -68,3 +68,8 @@ export const selectPostById = (
   state: RootState,
   postId: string,
 ): Post | undefined => state.posts.find((post) => post.id === postId);
+
+export const selectPostByUser = (
+  state: RootState,
+  userId: string,
+): Posts | undefined => state.posts.filter((post) => post.user === userId);
