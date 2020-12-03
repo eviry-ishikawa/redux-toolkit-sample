@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { RootState } from '../../app/store';
+import { PostAuthor } from './PostAuthor';
 import { selectPostById } from './postsSlice';
 
 export const PostPage = () => {
@@ -20,6 +21,9 @@ export const PostPage = () => {
     <div>
       <h1>{post?.title}</h1>
       <p>{post?.content}</p>
+      <Link to={`/users/${post.user}`}>
+        <PostAuthor userId={post.user} />
+      </Link>
     </div>
   );
 };
