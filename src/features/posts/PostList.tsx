@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { selectAllPost } from './postsSlice';
 import { ReactionButton } from './ReactionButton';
 import { PostInfo } from './PostInfo';
+import { AddPostForm } from './AddPostForm';
 
 export const PostList: React.FC = () => {
   const posts = useSelector(selectAllPost);
@@ -16,6 +17,9 @@ export const PostList: React.FC = () => {
           <Link to={`/posts/${post.id}`}>View Post</Link>
         </section>
       ))}
+      <div>
+        <AddPostForm />
+      </div>
     </div>
   );
 };
