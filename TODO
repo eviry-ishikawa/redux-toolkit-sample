@@ -3,7 +3,10 @@ Todo:
   [x] add router
   [x] add post page routing
   [x] add user page routing
-  [] add add post form
+  [x] add add post form
+  [] postをaddするときにuserを指定できるように
+  [] add navbar
   [] user pageをuseParamの値を使用するようにしてcreateSelectorを使う
+  [] add tailwind
   [] https://panda-program.com/posts/bengo4com-library-frontend 読む
   

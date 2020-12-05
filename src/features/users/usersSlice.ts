@@ -20,6 +20,8 @@ export const usersSlice = createSlice({
   reducers: {},
 });
 
+export const selectAllUser = (state: RootState): Users => state.users;
+
 export const selectUserById = (
   state: RootState,
   userId: string,

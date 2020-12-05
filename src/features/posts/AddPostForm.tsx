@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { UsersSelect } from '../users/UsersSelect';
 import { postAdded } from './postsSlice';
 
 export const AddPostForm = () => {
   const [title, setTitle] = useState('');
   const [context, setContext] = useState('');
+  const [user, setUser] = useState('');
 
   const dispatch = useDispatch();
 
@@ -16,10 +18,13 @@ export const AddPostForm = () => {
     setContext(e.target.value);
   };
 
+  const handleUserChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setUser(e.target.value);
+  };
+
   const handleSubmit = (e: React.FormEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    dispatch(postAdded(title, context, '1'));
-    console.log('eteaf');
+    dispatch(postAdded(title, context, user));
   };
 
   return (
@@ -34,6 +39,7 @@ export const AddPostForm = () => {
         <button type="button" onClick={handleSubmit}>
           Submit
         </button>
+        <UsersSelect handleChange={handleUserChange} />
       </form>
     </div>
   );
