@@ -10,6 +10,10 @@ export const PostList: React.FC = () => {
   const posts = useSelector(selectAllPost);
   return (
     <div>
+      <div>
+        <AddPostForm />
+      </div>
+      <h1>Post Lists</h1>
       {posts.map((post) => (
         <section key={post.id}>
           <PostInfo postId={post.id} />
@@ -17,9 +21,6 @@ export const PostList: React.FC = () => {
           <Link to={`/posts/${post.id}`}>View Post</Link>
         </section>
       ))}
-      <div>
-        <AddPostForm />
-      </div>
     </div>
   );
 };

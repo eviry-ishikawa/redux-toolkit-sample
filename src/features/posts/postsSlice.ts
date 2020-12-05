@@ -1,4 +1,9 @@
-import { createSelector, createSlice } from '@reduxjs/toolkit';
+import {
+  createSelector,
+  createSlice,
+  nanoid,
+  PayloadAction,
+} from '@reduxjs/toolkit';
 import { RootState } from '../../app/store';
 
 export type Reactions = {
@@ -47,6 +52,23 @@ export const postsSlice = createSlice({
   name: 'posts',
   initialState: initialState,
   reducers: {
+    postAdded: {
+      reducer(state, action: PayloadAction<Post>) {
+        state.push(action.payload);
+      },
+      prepare(title: string, content: string, userId: string) {
+        return {
+          payload: {
+            id: nanoid(),
+            title: title,
+            content: content,
+            user: userId,
+            reactions: { thumbsUp: 0, hooray: 0, heart: 0, rocket: 0, eyes: 0 },
+          },
+        };
+      },
+    },
+
     reactionAdded: (state, action) => {
       const {
         postId,
@@ -61,7 +83,7 @@ export const postsSlice = createSlice({
   },
 });
 
-export const { reactionAdded } = postsSlice.actions;
+export const { reactionAdded, postAdded } = postsSlice.actions;
 
 export const selectAllPost = (state: RootState): Posts => state.posts;
 export const selectPostById = (
