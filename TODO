@@ -4,7 +4,7 @@ Todo:
   [x] add post page routing
   [x] add user page routing
   [x] add add post form
-  [] postをaddするときにuserを指定できるように
+  [x] postをaddするときにuserを指定できるように
   [] add navbar
   [] user pageをuseParamの値を使用するようにしてcreateSelectorを使う
   [] add tailwind
