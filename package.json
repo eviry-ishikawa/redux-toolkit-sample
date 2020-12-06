@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@craco/craco": "^5.9.0",
     "@reduxjs/toolkit": "^1.2.5",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -13,17 +14,20 @@
     "@types/react-dom": "^16.9.0",
     "@types/react-redux": "^7.1.7",
     "@types/react-router-dom": "^5.1.6",
+    "autoprefixer": "9",
+    "postcss": "7",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "typescript": "~3.8.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

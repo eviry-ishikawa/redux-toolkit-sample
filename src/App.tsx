@@ -13,16 +13,18 @@ import { UsersList } from './features/users/UsersList';
 
 function App() {
   return (
-    <Router>
-      <NavBar />
-      <Route exact path="/" component={PostList} />
-      <Route path="/posts/:postId" component={PostPage} />
-      <Route exact path="/users" component={UsersList} />
-      <Route path="/users/:userId" component={UserPage} />
-      {/* <div className="App">
+    <div className="container mx-auto">
+      <Router>
+        <NavBar />
+        <Route exact path="/" component={PostList} />
+        <Route path="/posts/:postId" component={PostPage} />
+        <Route exact path="/users" component={UsersList} />
+        <Route path="/users/:userId" component={UserPage} />
+        {/* <div className="App">
         <PostList />
       </div> */}
-    </Router>
+      </Router>
+    </div>
   );
 }
 

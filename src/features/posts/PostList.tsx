@@ -9,7 +9,7 @@ import { AddPostForm } from './parts/AddPostForm';
 export const PostList: React.FC = () => {
   const posts = useSelector(selectAllPost);
   return (
-    <div>
+    <div className="mx-auto px-8">
       <div>
         <AddPostForm />
       </div>
