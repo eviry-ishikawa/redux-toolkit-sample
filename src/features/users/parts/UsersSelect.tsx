@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { selectAllUser } from './usersSlice';
+import { selectAllUser } from '../usersSlice';
 
 type UsersSelectProps = {
   handleChange: (e: React.ChangeEvent<HTMLSelectElement>) => void;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '../../app/store';
-import { reactionAdded, Reactions, selectPostById } from './postsSlice';
+import { RootState } from '../../../app/store';
+import { reactionAdded, Reactions, selectPostById } from '../postsSlice';
 
 const reactionEmoji = {
   thumbsUp: '👍',

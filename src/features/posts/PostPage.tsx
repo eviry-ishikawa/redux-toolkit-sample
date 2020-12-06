@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
 import { RootState } from '../../app/store';
-import { PostAuthor } from './PostAuthor';
+import { PostAuthor } from './parts/PostAuthor';
 import { selectPostById } from './postsSlice';
 
 export const PostPage = () => {
