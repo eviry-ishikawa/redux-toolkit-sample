@@ -5,8 +5,9 @@ Todo:
   [x] add user page routing
   [x] add add post form
   [x] postをaddするときにuserを指定できるように
-  [] add navbar
-  [] user pageをuseParamの値を使用するようにしてcreateSelectorを使う
+  [x] add navbar
+  [x] user pageをuseParamの値を使用するようにしてcreateSelectorを使う
+  [x] postaddedによるpost listの不要な再レンダリングを阻止 --> postはmemo化されているのでOK
   [] add tailwind
   [] https://panda-program.com/posts/bengo4com-library-frontend 読む
   
