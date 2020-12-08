@@ -17,8 +17,9 @@ export const PostInfo = React.memo(({ postId }: PostInfoProps) => {
   }
   return (
     <div>
-      <p>{post.title}</p>
+      <h3>{post.title}</h3>
       <p>{post.user}</p>
+      <p>{post.content}</p>
       <Link to={`/users/${post.user}`}>
         <PostAuthor userId={post.user} />
       </Link>
