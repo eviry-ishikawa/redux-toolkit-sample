@@ -8,6 +8,7 @@ Todo:
   [x] add navbar
   [x] user pageをuseParamの値を使用するようにしてcreateSelectorを使う
   [x] postaddedによるpost listの不要な再レンダリングを阻止 --> postはmemo化されているのでOK
-  [] add material ui
+  [x] add material ui
+  []  add Post Card
   [] https://panda-program.com/posts/bengo4com-library-frontend 読む
   

@@ -1,7 +1,9 @@
+import { Container } from '@material-ui/core';
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { RootState } from '../../app/store';
+import { PostCard } from '../posts/parts/PostCard';
 import { selectPostById, selectPostByUser } from '../posts/postsSlice';
 import { selectUserById } from './usersSlice';
 
@@ -14,20 +16,11 @@ export const UserPage: React.FC = () => {
   );
 
   return (
-    <div>
-      {user?.name} ' s post
+    <Container>
+      <h1>{user?.name} ' s posts</h1>
       {posts?.map((post) => (
-        <div key={post.id}>
-          <ul>
-            <li>
-              <p>
-                Title:{post.title}
-                Content:{post.content}
-              </p>
-            </li>
-          </ul>
-        </div>
+        <PostCard post={post} />
       ))}
-    </div>
+    </Container>
   );
 };
