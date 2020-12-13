@@ -20,7 +20,7 @@ export const UserPage: React.FC = () => {
       <h1>{user?.name} ' s posts</h1>
       {posts?.map((post) => (
         <div key={post.id}>
-          <PostCard post={post} />
+          <PostCard postId={post.id} />
         </div>
       ))}
     </Container>

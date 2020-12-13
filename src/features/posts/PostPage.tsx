@@ -1,3 +1,4 @@
+import { Container } from '@material-ui/core';
 import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
@@ -18,12 +19,12 @@ export const PostPage: React.FC = () => {
   }
 
   return (
-    <div>
+    <Container>
       <h1>{post?.title}</h1>
       <p>{post?.content}</p>
       <Link to={`/users/${post.user}`}>
         <PostAuthor userId={post.user} />
       </Link>
-    </div>
+    </Container>
   );
 };
