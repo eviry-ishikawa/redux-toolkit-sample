@@ -29,16 +29,15 @@ export const UsersSelect: React.FC<UsersSelectProps> = ({ handleChange }) => {
   const classes = useStyles();
 
   const usersOptions = users.map((user) => (
-    <option key={user.id} value={user.id}>
+    <MenuItem key={user.id} value={user.id}>
       {user.name}
-    </option>
+    </MenuItem>
   ));
 
   return (
     <FormControl className={classes.formControl}>
       <InputLabel>user</InputLabel>
-      <Select onChange={handleChange}>
-        <MenuItem value=""></MenuItem>
+      <Select defaultValue={1} onChange={handleChange}>
         {usersOptions}
       </Select>
     </FormControl>

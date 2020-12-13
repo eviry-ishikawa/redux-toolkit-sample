@@ -5,7 +5,7 @@ import { postAdded } from '../postsSlice';
 import Button from '@material-ui/core/Button';
 import { Box, Card, Grid, TextField } from '@material-ui/core';
 
-export const AddPostForm = () => {
+export const AddPostForm: React.FC = () => {
   const [title, setTitle] = useState('');
   const [context, setContext] = useState('');
   const [user, setUser] = useState('');

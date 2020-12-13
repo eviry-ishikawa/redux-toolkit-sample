@@ -5,7 +5,7 @@ import { RootState } from '../../app/store';
 import { PostAuthor } from './parts/PostAuthor';
 import { selectPostById } from './postsSlice';
 
-export const PostPage = () => {
+export const PostPage: React.FC = () => {
   const { postId } = useParams<any>();
   useEffect(() => {
     console.log(postId);

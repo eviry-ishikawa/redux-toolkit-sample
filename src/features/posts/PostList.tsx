@@ -13,9 +13,10 @@ export const PostList: React.FC = () => {
         <AddPostForm />
         <h1>Post Lists</h1>
         {posts.map((post) => (
-          <Box m={2}>
+          <div key={post.id}>
+            <Box m={2}></Box>
             <PostCard post={post} />
-          </Box>
+          </div>
         ))}
       </div>
     </Container>

@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { selectAllUser } from './usersSlice';
 
-export const UsersList = () => {
+export const UsersList: React.FC = () => {
   const users = useSelector(selectAllUser);
 
   return (
